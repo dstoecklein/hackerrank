@@ -1,18 +1,8 @@
 def print_formatted(number):
-    # your code goes here
-    padding = len(format(number, "b"))-1
-    for i in range(number):
-        print(
-            format(number),
-            " " * padding,
-            format(number, "o"),
-            " " * padding,
-            format(number, "x"),
-            " " * padding,
-            format(number, "b"),
-        )
-    
+    padding = len(str(format(number, "b")))
+    for i in range(1, number+1):
+        print ("{0:{padding}d} {0:{padding}o} {0:{padding}X} {0:{padding}b}".format(i, padding=padding))
 
 if __name__ == '__main__':
-    n = int(17)
+    n = int(input())
     print_formatted(n)
