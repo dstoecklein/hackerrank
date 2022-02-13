@@ -27,5 +27,4 @@ def check_str(string_):
 
     return valid
 
-str_ = "]"
-print(check_str(str_))
+print(check_str("["))
