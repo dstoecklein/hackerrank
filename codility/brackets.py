@@ -5,7 +5,7 @@ def check_str(string_):
     closeb = "])}" # when close -> pop
     valid = False
 
-    if string_[0] in closeb:
+    if string_[0] in closeb or len(string_) <= 1:
         return valid
     else:   
         for c in string_:
@@ -27,5 +27,5 @@ def check_str(string_):
 
     return valid
 
-str_ = "]["
+str_ = "]"
 print(check_str(str_))
