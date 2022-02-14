@@ -17,6 +17,7 @@ import sys
 
 def towerBreakers(n, m):
     # Write your code here
+    return 2 if n%2 == 0 or m==1 else 1
     
 if __name__ == '__main__':
     n = int(first_multiple_input[0])
