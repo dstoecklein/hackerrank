@@ -3,17 +3,23 @@ from collections import OrderedDict
 
 if __name__ == "__main__":
     n = int(input())
+    words = list()
+    
+    for i in range(n):
+        words.append(input())
+        
+    distinct = len(set(words))
 
     o = OrderedDict()
     
-    for i in range(n):
-        items = list(input().split())
-        net_price = int(items[-1])
-        item_name = " ".join(items[:-1])
-        if item_name in o:
-            o[item_name] += net_price
+    for w in words:
+        if w in o:
+            o[w] += 1
         else:
-            o[item_name] = net_price
+            o[w] = 1
             
+    print(distinct)
+    result = ""
     for k, v in o.items():
-        print(k, v)
+        result += str(v) + " "
+    print(result)
